@@ -21,8 +21,8 @@ player_x = 0
 player_y = 800
 player_vel_y = 0
 player_speed = 8
-gravity = 0.5
-jump_vel = -15
+gravity = 0.1
+jump_vel = -7.5
 
 block_x = 1000
 block_y = 932
@@ -38,9 +38,6 @@ while running:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_w:
                 player_vel_y = jump_vel
-
-def update():
-    global player_y, player_vel_y
 
     # Handle player movement
     player_vel_y += gravity
